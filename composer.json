@@ -14,7 +14,7 @@
         }
     },
     "extra": {
-        "class": "ComposerPlugin"
+        "class": "Imaginaria\\Composer\\ComposerPlugin"
     },
     "require-dev": {
         "composer/composer": "^1.3"
