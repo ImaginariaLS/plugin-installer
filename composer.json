@@ -1,0 +1,23 @@
+{
+    "name": "imaginaria/plugin-installer",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karel Wintersky",
+            "email": "karel.wintersky@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"imaginaria\\Composer": "/src"}
+    },
+    "extra": {
+        "class": "Imaginaria\\Composer\\PluginInstaller"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3"
+    },
+    "require": {
+        "composer-plugin-api": "^2.2"
+    }
+}
