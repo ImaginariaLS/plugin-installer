@@ -5,7 +5,7 @@ namespace Imaginaria\Composer;
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
-class Installer extends LibraryInstaller
+class ComposerInstaller extends LibraryInstaller
 {
     const PLUGIN_PREFIX_LENGTH = 18;
     /**
