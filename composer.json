@@ -9,12 +9,9 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "Imaginaria\\Composer": "/src"
+        "psr-4": {
+            "Imaginaria\\Composer\\": "/src"
         }
-    },
-    "extra": {
-        "class": "Imaginaria\\Composer\\ComposerPlugin"
     },
     "require-dev": {
         "composer/composer": "^1.3"
