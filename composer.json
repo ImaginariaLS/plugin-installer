@@ -9,7 +9,7 @@
         }
     ],
     "autoload": {
-        "psr-0": {"imaginaria\\Composer": "/src"}
+        "psr-0": {"Imaginaria\\Composer": "/src"}
     },
     "extra": {
         "class": "Imaginaria\\Composer\\PluginInstaller"
