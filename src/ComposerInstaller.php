@@ -7,7 +7,7 @@ use Composer\Installer\LibraryInstaller;
 
 class ComposerInstaller extends LibraryInstaller
 {
-    const PLUGIN_PREFIX_LENGTH = 18;
+    const PLUGIN_PREFIX_LENGTH = 19;
     /**
      * @inheritDoc
      */
@@ -18,7 +18,9 @@ class ComposerInstaller extends LibraryInstaller
             throw new \InvalidArgumentException(
                 'Unable to install plugin, imaginaria plugins '
                 .'should always start their package name with '
-                .'"imaginaria/plugin."'
+                .'"imaginaria/plugin.", this plugin have prettyName: '
+                ."\"{$package->getPrettyName()}\""
+                .", so prefix is '{$prefix}'"
             );
         }
 
