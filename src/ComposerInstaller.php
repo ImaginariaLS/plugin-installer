@@ -7,14 +7,17 @@ use Composer\Installer\LibraryInstaller;
 
 class ComposerInstaller extends LibraryInstaller
 {
-    const PLUGIN_PREFIX_LENGTH = 19;
     /**
      * @inheritDoc
      */
     public function getInstallPath(PackageInterface $package)
     {
-        $prefix = substr($package->getPrettyName(), 0, self::PLUGIN_PREFIX_LENGTH);
-        if ('imaginaria/plugin.' !== $prefix) {
+        $mask ='imaginaria/plugin.';
+        $mask_length = strlen($mask);
+
+        $prefix = substr($package->getPrettyName(), 0, $mask_length);
+
+        if ($mask !== $prefix) {
             throw new \InvalidArgumentException(
                 'Unable to install plugin, imaginaria plugins '
                 .'should always start their package name with '
@@ -24,7 +27,7 @@ class ComposerInstaller extends LibraryInstaller
             );
         }
 
-        return 'plugins/' . substr($package->getPrettyName(), self::PLUGIN_PREFIX_LENGTH);
+        return 'plugins/' . substr($package->getPrettyName(), $mask_length);
     }
 
     /**
